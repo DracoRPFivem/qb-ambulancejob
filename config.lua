@@ -3,7 +3,7 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target in
 Config.MinimalDoctors = 2 -- How many players with the ambulance job to prevent the hospital check-in system from being used
 Config.WipeInventoryOnRespawn = true -- Enable or disable removing all the players items when they respawn at the hospital
 Config.Helicopter = "polmav" -- Helicopter model that players with the ambulance job can use
-Config.BillCost = 2000 -- Price that players are charged for using the hospital check-in system
+Config.BillCost = 500 -- Price that players are charged for using the hospital check-in system
 Config.DeathTime = 300 -- How long the timer is for players to bleed out completely and respawn at the hospital
 Config.PainkillerInterval = 60 -- Set the length of time painkillers last (per one)
 Config.HealthDamage = 5 -- Minumum damage done to health before checking for injuries
@@ -32,75 +32,77 @@ Config.DamageMinorToMajor = 35 -- How much damage would have to be applied for a
 Config.AlertShowInfo = 2 -- How many injuries a player must have before being alerted about them
 
 Config.Locations = { -- Edit the various interaction points for players or create new ones
-    ["checking"] = {
-	    [1] = vector3(308.19, -595.35, 43.29),
-	    [2] = vector3(-254.54, 6331.78, 32.43), -- paleto
-    },
-    ["duty"] = {
-        [1] = vector3(311.18, -599.25, 43.29),
-        [2] = vector3(-254.88, 6324.5, 32.58),
-    },
-    ["vehicle"] = {
-        [1] = vector4(294.578, -574.761, 43.179, 35.79),
-        [2] = vector4(-234.28, 6329.16, 32.15, 222.5),
-    },
-    ["helicopter"] = {
-        [1] = vector4(351.58, -587.45, 74.16, 160.5),
-        [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
-    },
-    ["armory"] = {
-        [1] = vector3(309.93, -602.94, 43.29),
-        [2] = vector3(-245.13, 6315.71, 32.82),
-    },
-    ["roof"] = {
-        [1] = vector4(338.5, -583.85, 74.16, 245.5),
-    },
-    ["main"] = {
-        [1] = vector3(298.74, -599.33, 43.29),
-    },
-    ["stash"] = {
-        [1] = vector3(309.78, -596.6, 43.29),
-    },
-    ["beds"] = {
-        [1] = {coords = vector4(353.1, -584.6, 43.11, 152.08), taken = false, model = 1631638868},
-        [2] = {coords = vector4(356.79, -585.86, 43.11, 152.08), taken = false, model = 1631638868},
-        [3] = {coords = vector4(354.12, -593.12, 43.1, 336.32), taken = false, model = 2117668672},
-        [4] = {coords = vector4(350.79, -591.8, 43.1, 336.32), taken = false, model = 2117668672},
-        [5] = {coords = vector4(346.99, -590.48, 43.1, 336.32), taken = false, model = 2117668672},
-        [6] = {coords = vector4(360.32, -587.19, 43.02, 152.08), taken = false, model = -1091386327},
-        [7] = {coords = vector4(349.82, -583.33, 43.02, 152.08), taken = false, model = -1091386327},
-        [8] = {coords = vector4(326.98, -576.17, 43.02, 152.08), taken = false, model = -1091386327},
-	--- paleto
-	    [9] = {coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672},
-        [10] = {coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672},
-        [11] = {coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672},
-    },
-    ["stations"] = {
-        [1] = {label = Lang:t('info.pb_hospital'), coords = vector4(304.27, -600.33, 43.28, 272.249)}
-    }
+["duty"] = {
+    [1] = vector3(306.09, -597.62, 43.28),
+    [2] = vector3(-254.88, 6324.5, 32.58),
+},
+["vehicle"] = {
+    [1] = vector4(294.578, -574.761, 43.179, 35.79),
+    [2] = vector4(-234.28, 6329.16, 32.15, 222.5),
+},
+["helicopter"] = {
+    [1] = vector4(351.58, -587.45, 74.16, 160.5),
+    [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
+},
+["armory"] = {
+    [1] = vector3(309.93, -602.94, 43.29),
+    [2] = vector3(-245.13, 6315.71, 32.82),
+},
+["roof"] = {
+    [1] = vector3(339.49, -584.13, 74.16),
+},
+["main"] = {
+    [1] = vector3(331.47, -595.41, 43.28),
+},
+["stash"] = {
+    [1] = vector3(301.58, -599.35, 43.28),
+},
+["beds"] = {
+    [1] = {coords = vector4(307.89, -581.47, 44.2, 150.52), taken = false, model = 1631638868},
+    [2] = {coords = vector4(311.21, -582.78, 44.2, 158.69), taken = false, model = 1631638868},
+    [3] = {coords = vector4(314.62, -583.96, 44.2, 145.2), taken = false, model = 2117668672},
+    [4] = {coords = vector4(317.79, -585.04, 44.2, 344.82), taken = false, model = 2117668672},
+    [5] = {coords = vector4(322.77, -586.79, 44.2, 156.69), taken = false, model = 2117668672},
+    [6] = {coords = vector4(324.3, -582.59, 44.2, 161.95), taken = false, model = -1091386327},
+    [7] = {coords = vector4(319.4, -581.32, 44.2, 348.96), taken = false, model = -1091386327},
+    [8] = {coords = vector4(313.86, -579.37, 44.2, 349.42), taken = false, model = -1091386327},
+    [9] = {coords = vector4(309.3, -577.52, 44.2, 354.36), taken = false, model = -1091386327},
+--- paleto
+[10] = {coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672},
+[11] = {coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672},
+[12] = {coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672},
+},
+["stations"] = {
+    [1] = {label = Lang:t('info.pb_hospital'), coords = vector4(304.27, -600.33, 43.28, 272.249)}
+}
 }
 
 Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulance job grade level
 	-- Grade 0
 	[0] = {
 		["ambulance"] = "Ambulance",
+        ["lsambulance"] = "Blue On White",
 	},
 	-- Grade 1
 	[1] = {
 		["ambulance"] = "Ambulance",
-
+        ["lsambulance"] = "Blue On White",
 	},
 	-- Grade 2
 	[2] = {
 		["ambulance"] = "Ambulance",
+        ["lsambulance"] = "Blue On White",
 	},
 	-- Grade 3
 	[3] = {
 		["ambulance"] = "Ambulance",
+        ["lsambulance"] = "Blue On White",
 	},
 	-- Grade 4
 	[4] = {
+        ["ems"] = "EMS Chief",
 		["ambulance"] = "Ambulance",
+        ["lsambulance"] = "Blue On White",
 	}
 }
 
