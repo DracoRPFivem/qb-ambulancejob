@@ -1,6 +1,6 @@
 Config = {}
 Config.UseTarget = false -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true)
-Config.MinimalDoctors = 2 -- How many players with the ambulance job to prevent the hospital check-in system from being used
+Config.MinimalDoctors = 1 -- How many players with the ambulance job to prevent the hospital check-in system from being used
 Config.WipeInventoryOnRespawn = true -- Enable or disable removing all the players items when they respawn at the hospital
 Config.Helicopter = "polmav" -- Helicopter model that players with the ambulance job can use
 Config.BillCost = 500 -- Price that players are charged for using the hospital check-in system
