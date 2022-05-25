@@ -32,8 +32,9 @@ Config.DamageMinorToMajor = 35 -- How much damage would have to be applied for a
 Config.AlertShowInfo = 2 -- How many injuries a player must have before being alerted about them
 
 Config.Locations = { -- Edit the various interaction points for players or create new ones
-["checking"] = 
+["checking"] = {
           vector3(306.79, -594.82, 43.28),
+},
 ["duty"] = {
     [1] = vector3(306.09, -597.62, 43.28),
     [2] = vector3(-254.88, 6324.5, 32.58),
