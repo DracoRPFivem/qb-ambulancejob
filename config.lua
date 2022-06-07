@@ -81,28 +81,34 @@ Config.Locations = { -- Edit the various interaction points for players or creat
 }
 
 Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulance job grade level
-	-- Grade 0
+	-- Grade 0 EMT
 	[0] = {
 		["ambulance"] = "Ambulance",
         ["lsambulance"] = "Blue On White",
 	},
-	-- Grade 1
+	-- Grade 1 Paramedic
 	[1] = {
 		["ambulance"] = "Ambulance",
         ["lsambulance"] = "Blue On White",
 	},
-	-- Grade 2
+	-- Grade 2 Doctor
 	[2] = {
 		["ambulance"] = "Ambulance",
         ["lsambulance"] = "Blue On White",
 	},
-	-- Grade 3
+	-- Grade 3 Surgeon
 	[3] = {
 		["ambulance"] = "Ambulance",
         ["lsambulance"] = "Blue On White",
 	},
-	-- Grade 4
+	-- Grade 4 Assistant Med Director
 	[4] = {
+        ["ems"] = "EMS Chief",
+		["ambulance"] = "Ambulance",
+        ["lsambulance"] = "Blue On White",
+	},
+    --Grade 5 Med Director
+    [5] = {
         ["ems"] = "EMS Chief",
 		["ambulance"] = "Ambulance",
         ["lsambulance"] = "Blue On White",
