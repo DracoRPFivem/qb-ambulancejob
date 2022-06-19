@@ -38,7 +38,7 @@ Config.Locations = { -- Edit the various interaction points for players or creat
 	    [2] = vector3(-254.54, 6331.78, 32.43), -- paleto
     },
     ["duty"] = {
-        [1] = vector3(311.18, -599.25, 43.29),
+        [1] = vector3(306.92, -597.8, 43.28),
         [2] = vector3(-254.88, 6324.5, 32.58),
     },
     ["vehicle"] = {
