@@ -960,12 +960,15 @@ else
                 minZ = v.coords.z - 1,
                 maxZ = v.coords.z + 1,
             })
+            local bedCombo = ComboZone:Create(bedPoly, {name = "bedCombo", debugPoly = false})
             bedCombo:onPlayerInOut(function(isPointInside)
-                if isPointInside and not isInHospitalBed then
+                if isInHospitalBed then
+                    listen = false
+                    exports['qb-core']:HideText()
+                elseif isPointInside then
                     exports['qb-core']:DrawText(Lang:t('text.lie_bed'), 'left')
                     CheckInControls("beds")
-                else
-                    inBed = false
+                elseif not isPointInside then
                     listen = false
                     exports['qb-core']:HideText()
                 end
